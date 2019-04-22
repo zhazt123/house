@@ -1,0 +1,39 @@
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+spring:
+  application:
+    name: service-order
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/1808b?characterEncoding=utf-8
+    username: root
+    password: 123
+
+    thymeleaf:
+      encoding: UTF-8
+      servlet:
+        content-type: text/html
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/1808b
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      maxIdle: 300
+      maxActive: 600
+      maxWait: 1000
+      testOnBorrow: true
+      timeout: 1000
+    rabbitmq:
+      host: 127.0.0.1
+      port: 5672
+      username: guest
+      password: guest
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
