@@ -7,7 +7,6 @@ eureka:
 spring:
   application:
     name: service-order
-
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/1808b?characterEncoding=utf-8
@@ -28,7 +27,7 @@ spring:
       maxActive: 600
       maxWait: 1000
       testOnBorrow: true
-      timeout: 1000
+      timeout: 10000
     rabbitmq:
       host: 127.0.0.1
       port: 5672
